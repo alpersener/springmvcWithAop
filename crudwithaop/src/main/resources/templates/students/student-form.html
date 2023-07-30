@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:ject="http://www.w3.org/1999/xhtml">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <title>Öğrenciyi Kaydet</title>
+</head>
+
+<body>
+<div class="container">
+  <h3>Öğrenci Listesi </h3>
+  <hr>
+  <p class="h4 mb-4">Öğrenciyi Kaydet</p>
+  <form action="#" th:action="@{/api/students/save}"
+        th:object="${student}" method="post">
+
+
+    <input type="hidden" th:field="*{id}">
+    <input type="text" th:field="*{firstName}" class="form-control mb-4 w-25" placeholder="İsim">
+    <input type="text" th:field="*{lastName}" class="form-control mb-4 w-25" placeholder="Soyisim">
+    <input type="text" th:field="*{email}" class="form-control mb-4 w-25" placeholder="Email">
+    <input type="text" th:field="*{number}" class="form-control mb-4 w-25" placeholder="Öğrenci numarası">
+    <button type="submit" class="btn btn-info col-2">Kaydet</button>
+  </form>
+
+  <hr>
+  <a th:href="@{/api/students/list}">Öğrenci Listesine Geri Dön</a>
+
+</div>
+
+</body>
+</html>
