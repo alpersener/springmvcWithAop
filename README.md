@@ -7,6 +7,7 @@ This project covers basic CRUD operations with Thymeleaf and using Spring Securi
 - Uses MYSQL as a database.
 - The project utilizes a custom authentication system with bcrypt-encrypted passwords and role-based access restrictions. User roles and passwords are managed in the project's database.
 - Using Thymeleaf
+- The templates are ready-made Bootstrap code snippets.
 
 | Endpoint                        | Role      |
 |---------------------------------|-----------|
